@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F0EEEA;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #F0EEEA;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  
+  
+}
+form img {
+  display: block;
+  margin: 0 auto;
+  width: 200px; 
+}
+
+
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto 16px auto; /* centraliza horizontalmente e dá margem inferior */
+  padding: 10px;
+  width: 100%; /* ou um valor fixo como 250px se preferir */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 5px 5px 5px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-field .icon {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: #555;
+}
+
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #BCA37D;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.text1 {
+  color: #C48185;
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
+.dashboard-wrappe{
+  background-color: #C48185; ;
+}
+h3{
+  text-align: center;
+}
+.barra{
+  text-align: center;
+
+}
+
+
+.center-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F0EEEA; /* cor clara de fundo */
+  height: 100vh;
+  
+  
+  
+  
+}
+
+.form-box {
+  background:#F0EEEA;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+.text-xl {
+  text-align: center;
+}
+.mt-3 {
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+.branco{
+  color: white;
+}
