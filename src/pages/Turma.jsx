@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 
 function UserInfo() {
   const user = {
-    nome: 'Mirson',
-    usuario: 'Cuamba',
-    contactoEncarregado: '876802131',
-    estado: 'Ativo'
+    codigo: '2025A2',
+disciplina: 'portugues',
+    anolectivo: '2025'
+    
     
   };
 
@@ -32,27 +32,23 @@ function UserInfo() {
   return (
     <div style={containerStyle}>
       <div style={infoItemStyle}>
-        <div style={labelStyle}>Nome:</div>
-        <div>{user.nome}</div>
+        <div style={labelStyle}>Codigo:</div>
+        <div>{user.codigo}</div>
       </div>
       <div style={infoItemStyle}>
-        <div style={labelStyle}>Usuario:</div>
-        <div>{user.usuario}</div>
+        <div style={labelStyle}>Disciplina:</div>
+        <div>{user.disciplina}</div>
       </div>
       <div style={infoItemStyle}>
-        <div style={labelStyle}>ContactoEncarregado:</div>
-        <div>{user.contactoEncarregado}</div>
-      </div>
-      <div style={infoItemStyle}>
-        <div style={labelStyle}>Estado:</div>
-        <div>{user.estado}</div>
+        <div style={labelStyle}>AnoLectivo:</div>
+        <div>{user.anolectivo}</div>
       </div>
       
     </div>
   );
 }
 
-const Estud = () => {
+const Turma = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -84,27 +80,24 @@ const Estud = () => {
         <img src="/assets/logo.jpg" alt="logo" style={{ width: '200px' }} />
         <h2>Menu</h2>
         <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS NOTAS</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DISCIPLINAS</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>PROPINAS</button>
+        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS  TURMAS</button>
+        
         <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>SAIR</button>
         <p>Todos direitos reservados a @jrs 2025</p>
       </div>
 
       {/* Conteúdo */}
       <div style={{ flex: 1, padding: '20px' }}>
-        <h1>Estudante</h1>
-        <p>Listas de Estudantes cadastrados</p>
+        <h1>Tuma</h1>
+        <p>Minhas Turmas</p>
 
         <hr style={{ width: '100%', borderTop: '2px solid #ccc', marginBottom: '20px' }} />
 
         <UserInfo />
 
         {/* Botões na parte de baixo */}
-        <div style={{ marginTop: '40px', display: 'flex', gap: '20px' }}>
-          <button onClick={handleEstudante} style={{ padding: '10px 20px', fontSize: '16px' }}>
-            Criar Estudante
-          </button>
+        <div style={{ marginTop: '40px', display: 'flex', gap: '5px' }}>
+          
           <button onClick={handleVoltar} style={{ padding: '10px 20px', fontSize: '16px' }}>
             Voltar
           </button>
@@ -114,4 +107,4 @@ const Estud = () => {
   );
 };
 
-export default Estud;
+export default Turma;

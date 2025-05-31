@@ -14,6 +14,10 @@ import Propina from './pages/Propina';
 import Notas from './pages/Notas';
 import Prof from './pages/Prof'
 import Estud from './pages/Estud';
+import Turma from './pages/Turma';
+import LancarNotas from './pages/LancarNotas';
+import CriarDisciplina from './pages/CriarDisciplina';
+import CriarTurma from './pages/CriarTurma';
 
 function App() {
   return (
@@ -32,7 +36,10 @@ function App() {
           <Route path='/notas'element={<Notas/>}/>
           <Route path='/prof'element={<Prof/>}/>
           <Route path='/estu'element={<Estud/>}/>
-       
+          <Route path='/turma'element={<Turma/>}/>
+          <Route path='/lancarnotas'element={<LancarNotas/>}/>
+       <Route path='/criardis'element={<CriarDisciplina/>}/>
+       <Route path='/tur'element={<CriarTurma/>}/>
        
         <Route path="/Esqueci-Senha" element={<EsqueciSenha />} />
         <Route path="/Atualizar-Senha" element={<AtualizarSenha />} />

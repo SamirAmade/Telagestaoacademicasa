@@ -77,11 +77,27 @@ const Docente = () => {
       >
         <img src="/assets/logo.jpg" alt="logo" style={{ width: '200px' }} />
         <h2>Menu</h2>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS TURMAS</button>
-        <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>
-          SAIR
-        </button>
+        <button
+  style={{ marginBottom: '10px', width: '100%' }}
+  onClick={() => navigate('/dasyboard')}
+>
+  DASHBOARD
+</button>
+
+<button
+  style={{ marginBottom: '10px', width: '100%' }}
+  onClick={() => navigate('/turmas')}
+>
+  MINHAS TURMAS
+</button>
+
+<button
+  onClick={handleLogout}
+  style={{ marginBottom: '10px', width: '100%' }}
+>
+  SAIR
+</button>
+
         <div className="text1">
           <p>Todos direitos reservados a @jrs 2025</p>
         </div>

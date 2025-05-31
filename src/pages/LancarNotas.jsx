@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function UserInfo() {
   const user = {
+    id: '1',
     nome: 'Mirson',
-    usuario: 'Cuamba',
-    contactoEncarregado: '876802131',
-    estado: 'Ativo'
-    
+    avaliacao1: '16',
+    avaliacao2: '10',
+    avaliacao3: '20',
+    acp: 18
   };
 
   const containerStyle = {
@@ -31,40 +32,32 @@ function UserInfo() {
 
   return (
     <div style={containerStyle}>
-      <div style={infoItemStyle}>
-        <div style={labelStyle}>Nome:</div>
-        <div>{user.nome}</div>
-      </div>
-      <div style={infoItemStyle}>
-        <div style={labelStyle}>Usuario:</div>
-        <div>{user.usuario}</div>
-      </div>
-      <div style={infoItemStyle}>
-        <div style={labelStyle}>ContactoEncarregado:</div>
-        <div>{user.contactoEncarregado}</div>
-      </div>
-      <div style={infoItemStyle}>
-        <div style={labelStyle}>Estado:</div>
-        <div>{user.estado}</div>
-      </div>
-      
+      <div style={infoItemStyle}><div style={labelStyle}>ID:</div><div>{user.id}</div></div>
+      <div style={infoItemStyle}><div style={labelStyle}>Nome:</div><div>{user.nome}</div></div>
+      <div style={infoItemStyle}><div style={labelStyle}>Avaliacao1:</div><div>{user.avaliacao1}</div></div>
+      <div style={infoItemStyle}><div style={labelStyle}>Avaliacao2:</div><div>{user.avaliacao2}</div></div>
+      <div style={infoItemStyle}><div style={labelStyle}>Avaliacao3:</div><div>{user.avaliacao3}</div></div>
+      <div style={infoItemStyle}><div style={labelStyle}>Acp:</div><div>{user.acp}</div></div>
     </div>
   );
 }
 
-const Estud = () => {
+const LancarNotas = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
     navigate('/');
   };
 
-  const handleEstudante = () => {
-    navigate('/estud');
+  const handleVoltar = () => {
+    navigate('/dashboard'); // Corrigido aqui
   };
 
-  const handleVoltar = () => {
-    navigate('/dasyboard');
+  // Corrigido: estado para semestre
+  const [semestre, setSemestre] = useState("1º Semestre");
+
+  const handleChange = (e) => {
+    setSemestre(e.target.value);
   };
 
   return (
@@ -84,27 +77,30 @@ const Estud = () => {
         <img src="/assets/logo.jpg" alt="logo" style={{ width: '200px' }} />
         <h2>Menu</h2>
         <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS NOTAS</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DISCIPLINAS</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>PROPINAS</button>
+        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS TURMAS</button>
         <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>SAIR</button>
         <p>Todos direitos reservados a @jrs 2025</p>
       </div>
 
       {/* Conteúdo */}
       <div style={{ flex: 1, padding: '20px' }}>
-        <h1>Estudante</h1>
-        <p>Listas de Estudantes cadastrados</p>
+        <h1>Lançar Notas</h1>
+        <p>Turma: 2025A2 & Trimestre: 1</p>
+
+        <select
+          value={semestre}
+          onChange={handleChange}
+          style={{ padding: '5px 10px', fontSize: '16px' }}
+        >
+          <option value="1º Semestre">1º Semestre</option>
+          <option value="2º Semestre">2º Semestre</option>
+        </select>
 
         <hr style={{ width: '100%', borderTop: '2px solid #ccc', marginBottom: '20px' }} />
 
         <UserInfo />
 
-        {/* Botões na parte de baixo */}
-        <div style={{ marginTop: '40px', display: 'flex', gap: '20px' }}>
-          <button onClick={handleEstudante} style={{ padding: '10px 20px', fontSize: '16px' }}>
-            Criar Estudante
-          </button>
+        <div style={{ marginTop: '40px', display: 'flex', gap: '5px' }}>
           <button onClick={handleVoltar} style={{ padding: '10px 20px', fontSize: '16px' }}>
             Voltar
           </button>
@@ -114,4 +110,4 @@ const Estud = () => {
   );
 };
 
-export default Estud;
+export default LancarNotas;

@@ -64,10 +64,11 @@ const Notas = () => {
       <div className="sidebar" style={sidebarStyle}>
         <img src="/assets/logo.jpg" alt="logo" style={{ width: '200px' }} />
         <h2>Menu</h2>
-        <button style={buttonStyle}>DASHBOARD</button>
-        <button style={buttonStyle}>MINHAS NOTAS</button>
-        <button style={buttonStyle}>DISCIPLINAS</button>
-        <button style={buttonStyle}>PROPINAS</button>
+       <button onClick={() => navigate('/dasyboard')} style={buttonStyle}>DASHBOARD</button>
+<button onClick={() => navigate('/notas')} style={buttonStyle}>MINHAS NOTAS</button>
+<button onClick={() => navigate('/disciplina')} style={buttonStyle}>DISCIPLINAS</button>
+<button onClick={() => navigate('/propina')} style={buttonStyle}>PROPINAS</button>
+
         <button onClick={handleLogout} style={buttonStyle}>SAIR</button>
         <p>Todos direitos reservados a @jrs 2025</p>
       </div>

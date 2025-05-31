@@ -1,0 +1,97 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const CriarDisciplina= () => {
+  const navigate = useNavigate();
+
+  // Estado único para melhor organização
+  const [formData, setFormData] = useState({
+    nome: '',
+   
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Disciplina registrada: ${formData.nome} `);
+    // Aqui pode redirecionar, salvar em API, etc.
+  };
+
+  const handleVoltar = () => {
+    navigate(-1); // Volta para página anterior
+  };
+
+  return (
+    <div style={{ display: 'flex', height: '100vh' }}>
+      <div
+        style={{
+          width: '200px',
+          backgroundColor: '#f0f0f0',
+          padding: '20px',
+          boxShadow: '2px 0 5px rgba(0,0,0,0.1)',
+          textAlign: 'center',
+        }}
+      >
+        <img src="/assets/logo.jpg" alt="logo" style={{ width: '100%' }} />
+        <h2>Menu</h2>
+        <button style={buttonStyle}>DASHBOARD</button>
+        <button style={buttonStyle}>TURMAS</button>
+        <button style={buttonStyle}>DOCENTE</button>
+        <button style={buttonStyle}>ESTUDANTE</button>
+        <button style={buttonStyle}>DISCIPLINA</button>
+        <button style={buttonStyle}>SAIR</button>
+        <p>Todos direitos reservados a @jrs 2025</p>
+      </div>
+
+      <div style={{ flex: 1, padding: '40px' }}>
+        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <h1>Criar Disciplina</h1>
+          <p>Digite os dados da Disciplina</p>
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="nome" placeholder="NomeDisciplina" value={formData.nome} onChange={handleChange} required />
+            
+            <button type="submit" style={submitStyle}>Criar Disciplina</button>
+          </form>
+
+          <button onClick={handleVoltar} style={backStyle}>Voltar</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Estilos reutilizáveis
+const buttonStyle = {
+  marginBottom: '10px',
+  width: '100%',
+  padding: '10px',
+  cursor: 'pointer',
+};
+
+const submitStyle = {
+  marginTop: '20px',
+  padding: '12px',
+  width: '100%',
+  backgroundColor: '#BCA37D',
+  color: 'black',
+  border: 'none',
+  borderRadius: '8px',
+  cursor: 'pointer',
+};
+
+const backStyle = {
+  marginTop: '20px',
+  width: '100%',
+  padding: '12px',
+  borderRadius: '8px',
+  cursor: 'pointer',
+};
+
+export default CriarDisciplina;
