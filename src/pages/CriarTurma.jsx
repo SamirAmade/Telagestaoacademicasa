@@ -32,11 +32,11 @@ const CriarTurma= () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Docente cadastrado: ${formData.nome} ${formData.sobrenome}`);
-    // Aqui pode redirecionar, salvar em API, etc.
+    
   };
 
   const handleVoltar = () => {
-    navigate(-1); // Volta para página anterior
+    navigate(-1);
   };
 
   return (
@@ -88,7 +88,7 @@ const CriarTurma= () => {
   );
 };
 
-// Estilos reutilizáveis
+
 const buttonStyle = {
   marginBottom: '10px',
   width: '100%',

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const CadastroDocente = () => {
   const navigate = useNavigate();
 
-  // Estado único para melhor organização
+  
   const [formData, setFormData] = useState({
     nome: '',
     sobrenome: '',
@@ -32,11 +32,11 @@ const CadastroDocente = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Docente cadastrado: ${formData.nome} ${formData.sobrenome}`);
-    // Aqui pode redirecionar, salvar em API, etc.
+    
   };
 
   const handleVoltar = () => {
-    navigate(-1); // Volta para página anterior
+    navigate(-1); 
   };
 
   return (
@@ -102,7 +102,7 @@ const CadastroDocente = () => {
   );
 };
 
-// Estilos reutilizáveis
+
 const buttonStyle = {
   marginBottom: '10px',
   width: '100%',

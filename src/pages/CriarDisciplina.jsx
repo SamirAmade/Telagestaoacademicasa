@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const CriarDisciplina= () => {
   const navigate = useNavigate();
 
-  // Estado único para melhor organização
+  
   const [formData, setFormData] = useState({
     nome: '',
    
@@ -21,11 +21,11 @@ const CriarDisciplina= () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Disciplina registrada: ${formData.nome} `);
-    // Aqui pode redirecionar, salvar em API, etc.
+    
   };
 
   const handleVoltar = () => {
-    navigate(-1); // Volta para página anterior
+    navigate(-1); 
   };
 
   return (
@@ -67,7 +67,7 @@ const CriarDisciplina= () => {
   );
 };
 
-// Estilos reutilizáveis
+
 const buttonStyle = {
   marginBottom: '10px',
   width: '100%',

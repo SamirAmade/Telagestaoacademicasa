@@ -18,6 +18,9 @@ import Turma from './pages/Turma';
 import LancarNotas from './pages/LancarNotas';
 import CriarDisciplina from './pages/CriarDisciplina';
 import CriarTurma from './pages/CriarTurma';
+import Tuurma from './pages/Tuurma';
+import Docente1 from './pages/Docente1';
+import DasyboardAlf from './pages/DasyboardAlf';
 
 function App() {
   return (
@@ -40,6 +43,9 @@ function App() {
           <Route path='/lancarnotas'element={<LancarNotas/>}/>
        <Route path='/criardis'element={<CriarDisciplina/>}/>
        <Route path='/tur'element={<CriarTurma/>}/>
+        <Route path='/tuur'element={<Tuurma/>}/>
+        <Route path='/docente1'element={<Docente1/>}/>
+        <Route path='/dasyb'element={<DasyboardAlf/>}/>
        
         <Route path="/Esqueci-Senha" element={<EsqueciSenha />} />
         <Route path="/Atualizar-Senha" element={<AtualizarSenha />} />

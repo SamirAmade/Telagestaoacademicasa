@@ -105,7 +105,7 @@ const Docente = () => {
 
       <div style={{ flex: 1, padding: '20px' }}>
         <h1>Bem-vindo, Samir</h1>
-        <FaCheck title="Certo" /> <FaUsers title="Estudantes" /> <FaSchool title="Turmas" />
+       
         <hr style={{ width: '100%', borderTop: '2px solid #ccc', marginBottom: '20px' }} />
         <h3>MINHAS INFORMAÇÕES</h3>
         <UserInfo />

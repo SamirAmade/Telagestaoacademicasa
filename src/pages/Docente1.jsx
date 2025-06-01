@@ -1,16 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaCheck, FaSchool } from 'react-icons/fa';
-import { FaUsers } from 'react-icons/fa6';
+
 
 function UserInfo() {
   const user = {
    
-    nome: 'Mirson',
-    genero: 'Masculino',
+    nome: 'Samir',
+    usuario: 'faquira',
     estado: 'Ativo',
-    usuario: 'Cuamba',
-    email:'misroncuamba@gmail.com'
+   email:'misroncuamba@gmail.com',
+    status: 'Mudar status',
   };
 
   const containerStyle = {
@@ -42,31 +41,29 @@ function UserInfo() {
       </div>
 
       <div style={infoItemStyle}>
-        <div style={labelStyle}>Gênero:</div>
-        <div>{user.genero}</div>
+        <div style={labelStyle}>Usuario:</div>
+        <div>{user.usuario}</div>
       </div>
 
       <div style={infoItemStyle}>
         <div style={labelStyle}>Estado:</div>
         <div>{user.estado}</div>
         </div>
-        
-
-        <div style={infoItemStyle}>
-        <div style={labelStyle}>Usuario:</div>
-        <div>{user.usuario}</div>
-      </div>
 
       <div style={infoItemStyle}>
         <div style={labelStyle}>Email:</div>
         <div>{user.email}</div>
+      </div>
+      <div style={infoItemStyle}>
+        <div style={labelStyle}>Mudar Estado:</div>
+        <div>{user.status}</div>
       </div>
       
     </div>
   );
 }
 
-const InfoEst = () => {
+const Docente1 = () => {
   const navigate = useNavigate(); 
 
   const handleLogout = () => {
@@ -91,9 +88,11 @@ const InfoEst = () => {
         <h2>Menu</h2>
         </div>
         <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS NOTAS</button>
-         <button style={{ marginBottom: '10px', width: '100%' }}>DISCIPLINAS</button>
-         <button style={{ marginBottom: '10px', width: '100%' }}>PROPINAS</button>
+        <button style={{ marginBottom: '10px', width: '100%' }}>TURMAS</button>
+         <button style={{ marginBottom: '10px', width: '100%' }}>DOCENTE</button>
+         <button style={{marginBottom:'10px',width:'100%'}}>ESTUDANTE</button>
+         <button style={{marginBottom:'10px',width:'100%'}}>DISCIPLINA</button>
+        
         <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>
           SAIR
         </button>
@@ -103,14 +102,14 @@ const InfoEst = () => {
       </div>
 
       <div style={{ flex: 1, padding: '20px' }}>
-        <h1>Bem-vindo, Mirson</h1>
-        
+        <h1>Docentes</h1>
+       <p>Listas dos Docentes cadastrados</p>
         <hr style={{ width: '100%', borderTop: '2px solid #ccc', marginBottom: '20px' }} />
-        <h3>INFORMACOES ESTUDANTE</h3>
+       
         <UserInfo />
       </div>
     </div>
   );
 };
 
-export default InfoEst;
+export default Docente1;
