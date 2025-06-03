@@ -52,12 +52,12 @@ const CadastroDocente = () => {
       >
         <img src="/assets/logo.jpg" alt="logo" style={{ width: '100%' }} />
         <h2>Menu</h2>
-        <button style={buttonStyle}>DASHBOARD</button>
-        <button style={buttonStyle}>TURMAS</button>
-        <button style={buttonStyle}>DOCENTE</button>
-        <button style={buttonStyle}>ESTUDANTE</button>
-        <button style={buttonStyle}>DISCIPLINA</button>
-        <button style={buttonStyle}>SAIR</button>
+       <button style={buttonStyle} onClick={() => navigate('/dasyboard')}>DASHBOARD</button>
+        <button style={buttonStyle} onClick={() => navigate('/turma')}>TURMAS</button>
+        <button style={buttonStyle} onClick={() => navigate('/docente')}>DOCENTE</button>
+        <button style={buttonStyle} onClick={() => navigate('/estudante')}>ESTUDANTE</button>
+        <button style={buttonStyle} onClick={() => navigate('/disciplina')}>DISCIPLINA</button>
+        <button style={buttonStyle} onClick={() => navigate('/login')}>SAIR</button>
         <p>Todos direitos reservados a @jrs 2025</p>
       </div>
 
@@ -103,12 +103,7 @@ const CadastroDocente = () => {
 };
 
 
-const buttonStyle = {
-  marginBottom: '10px',
-  width: '100%',
-  padding: '10px',
-  cursor: 'pointer',
-};
+
 
 const submitStyle = {
   marginTop: '20px',

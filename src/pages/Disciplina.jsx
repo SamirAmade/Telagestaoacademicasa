@@ -1,6 +1,32 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const buttonStyle = {
+  marginBottom: '10px',
+  width: '100%',
+  padding: '10px',
+  cursor: 'pointer',
+};
+
+const submitStyle = {
+  marginTop: '20px',
+  padding: '12px',
+  width: '100%',
+  backgroundColor: '#BCA37D',
+  color: 'black',
+  border: 'none',
+  borderRadius: '8px',
+  cursor: 'pointer',
+};
+
+const backStyle = {
+  marginTop: '20px',
+  width: '100%',
+  padding: '12px',
+  borderRadius: '8px',
+  cursor: 'pointer',
+};
+
 
 function UserInfo() {
   const user = {
@@ -76,13 +102,21 @@ const Disciplina = () => {
         <div className='branco'>
         <h2>Menu</h2>
         </div>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS NOTAS</button>
-         <button style={{ marginBottom: '10px', width: '100%' }}>DISCIPLINAS</button>
-         <button style={{ marginBottom: '10px', width: '100%' }}>PROPINAS</button>
-        <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>
-          SAIR
-        </button>
+       <button style={buttonStyle} onClick={() => navigate('/dasyboard')}>DASHBOARD</button>
+        <button style={buttonStyle} onClick={() => navigate('/notas')}>MINHAS NOTAS</button>
+        <button style={buttonStyle} onClick={() => navigate('/disciplina')}>DISCIPLINA</button>
+        <button style={buttonStyle} onClick={() => navigate('/propina')}>PROPINAS</button>
+        
+        <button
+  style={buttonStyle}
+  onClick={() => {
+    console.log('Clicou em SAIR');
+    navigate('/login');
+  }}
+>
+  SAIR
+</button>
+
         <div className="text1">
           <p>Todos direitos reservados a @jrs 2025</p>
         </div>

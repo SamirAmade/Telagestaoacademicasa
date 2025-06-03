@@ -6,8 +6,7 @@ function UserInfo() {
     nome: 'Mirson',
     usuario: 'Cuamba',
     contactoEncarregado: '876802131',
-    estado: 'Ativo'
-    
+    estado: 'Ativo',
   };
 
   const containerStyle = {
@@ -16,17 +15,17 @@ function UserInfo() {
     alignItems: 'center',
     flexWrap: 'wrap',
     marginTop: '20px',
-    justifyContent: 'center'
+    justifyContent: 'center',
   };
 
   const infoItemStyle = {
     display: 'flex',
     gap: '5px',
-    fontSize: '16px'
+    fontSize: '16px',
   };
 
   const labelStyle = {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   };
 
   return (
@@ -36,24 +35,31 @@ function UserInfo() {
         <div>{user.nome}</div>
       </div>
       <div style={infoItemStyle}>
-        <div style={labelStyle}>Usuario:</div>
+        <div style={labelStyle}>Usuário:</div>
         <div>{user.usuario}</div>
       </div>
       <div style={infoItemStyle}>
-        <div style={labelStyle}>ContactoEncarregado:</div>
+        <div style={labelStyle}>Contacto do Encarregado:</div>
         <div>{user.contactoEncarregado}</div>
       </div>
       <div style={infoItemStyle}>
         <div style={labelStyle}>Estado:</div>
         <div>{user.estado}</div>
       </div>
-      
     </div>
   );
 }
 
 const Estud = () => {
   const navigate = useNavigate();
+
+  const buttonStyle = {
+    marginBottom: '10px',
+    width: '100%',
+    padding: '10px',
+    fontSize: '14px',
+    cursor: 'pointer',
+  };
 
   const handleLogout = () => {
     navigate('/');
@@ -64,12 +70,11 @@ const Estud = () => {
   };
 
   const handleVoltar = () => {
-    navigate('/dasyboard');
+    navigate('/dasyboard'); // Corrigido aqui
   };
 
   return (
     <div className="dashboard-wrapper" style={{ display: 'flex', height: '100vh' }}>
-      
       {/* Sidebar */}
       <div
         className="sidebar"
@@ -78,16 +83,16 @@ const Estud = () => {
           backgroundColor: '#D7C8B4',
           padding: '20px',
           boxShadow: '2px 0 5px rgba(0,0,0,0.1)',
-          textAlign: 'center'
+          textAlign: 'center',
         }}
       >
         <img src="/assets/logo.jpg" alt="logo" style={{ width: '200px' }} />
         <h2>Menu</h2>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS NOTAS</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DISCIPLINAS</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>PROPINAS</button>
-        <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>SAIR</button>
+        <button style={buttonStyle} onClick={() => navigate('/dasyboard')}>DASHBOARD</button>
+        <button style={buttonStyle} onClick={() => navigate('/notas')}>MINHAS NOTAS</button>
+        <button style={buttonStyle} onClick={() => navigate('/disciplina')}>DISCIPLINA</button>
+        <button style={buttonStyle} onClick={() => navigate('/propina')}>PROPINAS</button>
+        <button style={buttonStyle} onClick={handleLogout}>SAIR</button>
         <p>Todos direitos reservados a @jrs 2025</p>
       </div>
 

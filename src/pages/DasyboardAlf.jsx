@@ -1,5 +1,30 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+const buttonStyle = {
+  marginBottom: '10px',
+  width: '100%',
+  padding: '10px',
+  cursor: 'pointer',
+};
+
+const submitStyle = {
+  marginTop: '20px',
+  padding: '12px',
+  width: '100%',
+  backgroundColor: '#BCA37D',
+  color: 'black',
+  border: 'none',
+  borderRadius: '8px',
+  cursor: 'pointer',
+};
+
+const backStyle = {
+  marginTop: '20px',
+  width: '100%',
+  padding: '12px',
+  borderRadius: '8px',
+  cursor: 'pointer',
+};
 
 function UserInfo() {
   const users = [
@@ -120,11 +145,12 @@ const DasyboardAlf = () => {
         <div className='branco'>
         <h2>Menu</h2>
         </div>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>TURMAS</button>
-         <button style={{ marginBottom: '10px', width: '100%' }}>DOCENTE</button>
-         <button style={{marginBottom:'10px',width:'100%'}}>ESTUDANTE</button>
-         <button style={{marginBottom:'10px',width:'100%'}}>DISCIPLINA</button>
+        <button style={buttonStyle} onClick={() => navigate('/dasyboard')}>DASHBOARD</button>
+        <button style={buttonStyle} onClick={() => navigate('/turma')}>TURMAS</button>
+        <button style={buttonStyle} onClick={() => navigate('/docente')}>DOCENTE</button>
+        <button style={buttonStyle} onClick={() => navigate('/estudante')}>ESTUDANTE</button>
+        <button style={buttonStyle} onClick={() => navigate('/disciplina')}>DISCIPLINA</button>
+       
         
         <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>
           SAIR
@@ -142,12 +168,12 @@ const DasyboardAlf = () => {
         <UserInfo />
        <button 
   style={{
-    marginTop: '20px', // distância para cima
-    width: '200px',     // largura razoável
-    padding: '10px',    // espaço interno
-    display: 'block',   // garante que ele fique em linha separada
+    marginTop: '20px', 
+    width: '200px',     
+    padding: '10px',    
+    display: 'block',   
     marginLeft: 'auto',
-    marginRight: 'auto' // centraliza o botão
+    marginRight: 'auto' 
   }} 
   type="submit"
 >

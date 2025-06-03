@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaCheck, FaSchool } from 'react-icons/fa';
-import { FaUsers } from 'react-icons/fa6';
+
+
 
 function UserInfo() {
   const user = {
-    id: 1,
+    id: '1',
     nome: 'Samir',
     genero: 'Masculino',
     estado: 'Ativo'
@@ -86,7 +86,7 @@ const Docente = () => {
 
 <button
   style={{ marginBottom: '10px', width: '100%' }}
-  onClick={() => navigate('/turmas')}
+  onClick={() => navigate('/turma')}
 >
   MINHAS TURMAS
 </button>

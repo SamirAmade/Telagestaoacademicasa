@@ -8,7 +8,7 @@ function UserInfo() {
     nome: 'Samir',
     usuario: 'faquira',
     estado: 'Ativo',
-   email:'misroncuamba@gmail.com',
+   email:'samiralyfaquira@gmail.com',
     status: 'Mudar status',
   };
 
@@ -87,15 +87,13 @@ const Docente1 = () => {
         <div className='branco'>
         <h2>Menu</h2>
         </div>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>TURMAS</button>
-         <button style={{ marginBottom: '10px', width: '100%' }}>DOCENTE</button>
-         <button style={{marginBottom:'10px',width:'100%'}}>ESTUDANTE</button>
-         <button style={{marginBottom:'10px',width:'100%'}}>DISCIPLINA</button>
-        
-        <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>
-          SAIR
-        </button>
+        <button style={buttonStyle} onClick={() => navigate('/dasyboard')}>DASHBOARD</button>
+        <button style={buttonStyle} onClick={() => navigate('/turma')}>TURMAS</button>
+        <button style={buttonStyle} onClick={() => navigate('/docente')}>DOCENTE</button>
+        <button style={buttonStyle} onClick={() => navigate('/estudante')}>ESTUDANTE</button>
+        <button style={buttonStyle} onClick={() => navigate('/disciplina')}>DISCIPLINA</button>
+        <button style={buttonStyle} onClick={() => navigate('/login')}>SAIR</button>
+
         <div className="text1">
           <p>Todos direitos reservados a @jrs 2025</p>
         </div>

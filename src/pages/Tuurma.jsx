@@ -1,6 +1,32 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const buttonStyle = {
+  marginBottom: '10px',
+  width: '100%',
+  padding: '10px',
+  cursor: 'pointer',
+};
+
+const submitStyle = {
+  marginTop: '20px',
+  padding: '12px',
+  width: '100%',
+  backgroundColor: '#BCA37D',
+  color: 'black',
+  border: 'none',
+  borderRadius: '8px',
+  cursor: 'pointer',
+};
+
+const backStyle = {
+  marginTop: '20px',
+  width: '100%',
+  padding: '12px',
+  borderRadius: '8px',
+  cursor: 'pointer',
+};
+
 function UserInfo() {
   const user = {
     id:'1',
@@ -108,10 +134,10 @@ const Tuurma = () => {
       >
         <img src="/assets/logo.jpg" alt="logo" style={{ width: '200px' }} />
         <h2>Menu</h2>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS  TURMAS</button>
+        <button style={buttonStyle} onClick={() => navigate('/dasyboard')}>DASHBOARD</button>
+        <button style={buttonStyle} onClick={() => navigate('/notas')}>MINAHS NOTAS </button>
         
-        <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>SAIR</button>
+        <button style={buttonStyle} onClick={() => navigate('/login')}>SAIR</button>
         <p>Todos direitos reservados a @jrs 2025</p>
       </div>
 

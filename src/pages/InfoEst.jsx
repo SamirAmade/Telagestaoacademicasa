@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaCheck, FaSchool } from 'react-icons/fa';
-import { FaUsers } from 'react-icons/fa6';
+
+
 
 function UserInfo() {
   const user = {
@@ -90,13 +90,13 @@ const InfoEst = () => {
         <div className='branco'>
         <h2>Menu</h2>
         </div>
-        <button style={{ marginBottom: '10px', width: '100%' }}>DASHBOARD</button>
-        <button style={{ marginBottom: '10px', width: '100%' }}>MINHAS NOTAS</button>
-         <button style={{ marginBottom: '10px', width: '100%' }}>DISCIPLINAS</button>
-         <button style={{ marginBottom: '10px', width: '100%' }}>PROPINAS</button>
-        <button onClick={handleLogout} style={{ marginBottom: '10px', width: '100%' }}>
-          SAIR
-        </button>
+        <button style={buttonStyle} onClick={() => navigate('/dasyboard')}>DASHBOARD</button>
+        <button style={buttonStyle} onClick={() => navigate('/turma')}>TURMAS</button>
+        <button style={buttonStyle} onClick={() => navigate('/docente')}>DOCENTE</button>
+        <button style={buttonStyle} onClick={() => navigate('/estudante')}>ESTUDANTE</button>
+        <button style={buttonStyle} onClick={() => navigate('/disciplina')}>DISCIPLINA</button>
+        <button style={buttonStyle} onClick={() => navigate('/login')}>SAIR</button>
+
         <div className="text1">
           <p>Todos direitos reservados a @jrs 2025</p>
         </div>
